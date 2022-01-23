@@ -1,0 +1,181 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+table thead th {
+  background-color: #D8AE80;
+}
+
+.addOffer {
+  margin-left: auto;
+}
+
+/* HeaderComponent */
+.header {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+.header img {
+  height: 113px;
+}
+
+.header .title {
+  flex: 1 1 auto;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.subtitle {
+  display: flex;
+}
+
+.subtitle > div h4:first-child {
+  margin-bottom: 0;
+}
+
+.subtitle .left {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.subtitle .right {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.header h1, .header .subtitle {
+  background-color: #FDA791;
+  color: #552B20;
+}
+
+.header h1 {
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.mrb-0 {
+  margin-bottom: 0;
+}
+
+/* End HeaderComponent */
+/* HomeComponent */
+.home {
+  display: flex;
+  width: 100%;
+}
+
+.column {
+  padding: 10px;
+}
+
+.column.left {
+  flex: 0 0 200px;
+}
+
+.column.center {
+  flex: 1 1 auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.column.right {
+  flex: 0 0 300px;
+}
+
+.datepicker {
+  margin-bottom: 10px;
+}
+
+.auctions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.auction-item {
+  padding: 10px
+}
+
+.auction-item a {
+  max-height: 100%;
+}
+
+.auction-item img {
+  height: 150px;
+}
+
+/* End HomeComponent */
+/* NavBarComponent */
+.navbar {
+  background-color: #FDA791;
+  margin: 0;
+  color: #552B20;
+  font-weight: bold;
+}
+
+.overview-one h4,
+.overview-two h4,
+.overview-three h4,
+.overview-four h4,
+.overview-five h4,
+.overview-six h4,
+.overview-eleven h4,
+.sign-on{
+  margin: 10px 0;
+  flex-basis: 100%;
+}
+
+.overview-two,
+.overview-three,
+.overview-four,
+.overview-five,
+.overview-six,
+.overview-eleven {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.overview {
+  margin-right: 10px;
+}
+
+app-detail2,
+app-detail3,
+app-detail4,
+app-detail41,
+app-detail42,
+app-detail5,
+app-detail6,
+app-detail11{
+  flex: 1 1 auto;
+}
+
+.detail-two #save,
+.detail-three button,
+.detail-four button,
+.detail-five button,
+.detail-six button,
+.detail-eleven button{
+  margin-left: 10px;
+}
+
+button#delete {
+  margin-left: auto;
+}
+
+.controlls {
+  display: flex;
+}
+
+.controlls .alert {
+  margin-left: auto;
+}
+
+.sign-on form {
+  width: 300px;
+  margin: auto;
+}

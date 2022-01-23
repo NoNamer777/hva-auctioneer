@@ -1,0 +1,44 @@
+<div class="detail-four">
+  <form novalidate [formGroup]="form">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th scope="col" colspan="2">Selected Offer details (id = {{offerId}}):</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th><label for="title">Title:</label></th>
+        <td><input class="form-control" type="text" id="title" formControlName="offerTitle"></td>
+      </tr>
+      <tr>
+        <th><label for="desc">Description:</label></th>
+        <td><input class="form-control" type="text" id="desc" formControlName="offerDesc"></td>
+      </tr>
+      <tr>
+        <th><label for="status">Status:</label></th>
+        <td>
+          <select class="form-control" id="status" formControlName="offerStatus">
+            <option *ngFor="let status of auctionStatus | enumToArray;"
+                    [selected]="offer.auctionStatus.toString() === status" [value]="status">{{status}}</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="noBids">Number of Bids:</label></th>
+        <td><input class="form-control" type="number" id="noBids" formControlName="offerNumberBids"></td>
+      </tr>
+      <tr>
+        <th><label for="highBid">Highest Bid:</label></th>
+        <td><input class="form-control" type="number" id="highBid" formControlName="offerHighestBid">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+  <button class="btn btn-danger float-right" id="cancel" (click)="cancelOffer()">Cancel</button>
+  <button class="btn btn-warning float-right" id="reset" (click)="resetOffer()" [disabled]="!hasChanges">Reset</button>
+  <button class="btn btn-warning float-right" id="clear" (click)="clearOffer()">Clear</button>
+  <button class="btn btn-success float-right" id="save" (click)="saveOffer()" [disabled]="!hasChanges">Save</button>
+  <button class="btn btn-danger float-right" id="delete" (click)="deleteOffer()" [disabled]="hasChanges">Delete</button>
+</div>

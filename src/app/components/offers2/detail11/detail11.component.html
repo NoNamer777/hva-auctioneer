@@ -1,0 +1,68 @@
+<div class="detail-eleven">
+  <form novalidate [formGroup]="form">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th scope="col" colspan="2">Selected Offer details (id = {{offerId}}):</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th><label for="title">Title:</label></th>
+        <td><input class="form-control"
+                   [ngClass]="{'is-invalid': showIsInvalid('offerTitle'), 'is-valid': showIsValid('offerTitle')}"
+                   type="text" id="title"
+                   formControlName="offerTitle"></td>
+      </tr>
+      <tr>
+        <th><label for="desc">Description:</label></th>
+        <td><input class="form-control"
+                   [ngClass]="{'is-invalid': showIsInvalid('offerDesc'), 'is-valid': showIsValid('offerDesc')}"
+                   type="text" id="desc" formControlName="offerDesc"></td>
+      </tr>
+      <tr>
+        <th><label for="status">Status:</label></th>
+        <td>
+          <select class="form-control"
+                  [ngClass]="{'is-invalid': showIsInvalid('offerStatus'), 'is-valid': showIsValid('offerStatus')}"
+                  id="status" formControlName="offerStatus">
+            <option *ngFor="let status of auctionStatus | enumToArray;"
+                    [selected]="offer.auctionStatus.toString() === status" [value]="status">{{status}}</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="noBids">Number of Bids:</label></th>
+        <td><input class="form-control"
+                   [ngClass]="{'is-invalid': showIsInvalid('offerNumberBids'), 'is-valid': showIsValid('offerNumberBids')}"
+                   type="number" id="noBids" formControlName="offerNumberBids"></td>
+      </tr>
+      <tr>
+        <th><label for="highBid">Highest Bid:</label></th>
+        <td><input class="form-control"
+                   [ngClass]="{'is-invalid': showIsInvalid('offerHighestBid'), 'is-valid': showIsValid('offerHighestBid')}"
+                   type="number" id="highBid" formControlName="offerHighestBid">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+  <div class="controlls">
+    <div class="alert alert-danger" role="alert" *ngIf="!isFormValid">
+      Please fix the input errors in the highlighted fields!
+    </div>
+  </div>
+  <div class="controlls">
+    <button class="btn btn-danger" id="delete" (click)="deleteOffer()"
+            [disabled]="isFormValid?hasChanges:true">Delete
+    </button>
+    <button class="btn btn-success" id="save" (click)="saveOffer()"
+            [disabled]="isFormValid?!hasChanges:true">
+      Save
+    </button>
+    <button class="btn btn-warning" id="clear" (click)="clearOffer()">Clear</button>
+    <button class="btn btn-warning" id="reset" (click)="resetOffer()" [disabled]="!hasChanges">Reset</button>
+    <button class="btn btn-danger" id="cancel" (click)="cancelOffer()">Cancel</button>
+
+  </div>
+</div>

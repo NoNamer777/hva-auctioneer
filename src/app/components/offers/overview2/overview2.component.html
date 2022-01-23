@@ -1,0 +1,23 @@
+<div class="overview-two">
+    <h4>Overview of all offered articles:</h4>
+  <div class="overview">
+    <table class="table table-hover table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">Offer Title:</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let offer of offers; let i = index">
+        <tr>
+          <td [ngClass]="currentRow == i ? 'table-active': null" (click)="onClickRow(i)">{{offer.title}}</td>
+      </ng-container>
+      </tbody>
+    </table>
+    <button class="btn btn-success float-right" (click)="addRandomOffer()">Add Offer</button>
+  </div>
+  <app-detail2 *ngIf="currentRow!=null; else showSelectMsg" [offer]="offers[currentRow]" (save)="saveOffer($event)" (delete)="deleteOffer($event)"></app-detail2>
+  <ng-template #showSelectMsg>
+    Select an offer at the left
+  </ng-template>
+</div>

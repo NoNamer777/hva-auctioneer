@@ -1,0 +1,66 @@
+[
+  {
+    "title": "This great article offer-0",
+    "sellDate": "2019-08-16T02:00:00.000Z",
+    "description": "Description offer-0",
+    "auctionStatus": "CLOSED",
+    "numberOfBids": 3,
+    "valueHighestBid": 230
+  },
+  {
+    "title": "This great article offer-1",
+    "sellDate": "2019-08-29T18:30:00.000Z",
+    "description": "Description offer-1",
+    "auctionStatus": "CLOSED",
+    "numberOfBids": 17,
+    "valueHighestBid": 115
+  },
+  {
+    "title": "This great article offer-2",
+    "sellDate": "2019-08-21T09:00:00.000Z",
+    "description": "Description offer-2",
+    "auctionStatus": "WITHDRAWN",
+    "numberOfBids": 11,
+    "valueHighestBid": 90
+  },
+  {
+    "title": "This great article offer-3",
+    "sellDate": "2019-09-09T06:30:00.000Z",
+    "description": "Description offer-3",
+    "auctionStatus": "FOR_SALE",
+    "numberOfBids": 2,
+    "valueHighestBid": 700
+  },
+  {
+    "title": "This great article offer-4",
+    "sellDate": "2019-08-16T14:00:00.000Z",
+    "description": "Description offer-4",
+    "auctionStatus": "CLOSED",
+    "numberOfBids": 15,
+    "valueHighestBid": 50
+  },
+  {
+    "title": "This great article offer-5",
+    "sellDate": "2019-09-27T14:30:00.000Z",
+    "description": "Description offer-5",
+    "auctionStatus": "NEW",
+    "numberOfBids": 3,
+    "valueHighestBid": 0
+  },
+  {
+    "title": "This great article offer-6",
+    "sellDate": "2019-09-08T17:00:00.000Z",
+    "description": "Description offer-6",
+    "auctionStatus": "NEW",
+    "numberOfBids": 3,
+    "valueHighestBid": 0
+  },
+  {
+    "title": "This great article offer-7",
+    "sellDate": "2019-08-29T02:30:00.000Z",
+    "description": "Description offer-7",
+    "auctionStatus": "CLOSED",
+    "numberOfBids": 9,
+    "valueHighestBid": 16
+  }
+]

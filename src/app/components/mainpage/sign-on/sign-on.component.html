@@ -1,0 +1,13 @@
+<div class="sign-on">
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input [(ngModel)]="email" name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input [(ngModel)]="password"  name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button class="btn btn-primary" (click)="login()">Log In</button>
+  </form>
+</div>

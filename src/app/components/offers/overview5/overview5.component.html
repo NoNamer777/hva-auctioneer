@@ -1,0 +1,25 @@
+<div class="overview-five">
+  <h4>Overview of all offered articles:</h4>
+  <div class="overview">
+    <table class="table table-hover table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">Offer Title:</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let offer of offers; let i = index">
+        <tr>
+          <td [ngClass]="selectedIndex == i ? 'table-active': null" (click)="onClickRow(i)">{{offer.title}}</td>
+      </ng-container>
+      </tbody>
+    </table>
+    <button class="btn btn-success float-right" (click)="addRandomOffer()">Add Offer</button>
+  </div>
+  <div *ngIf="selectedIndex == -1; else showSelectMsg">
+    Select an offer at the left
+  </div>
+  <ng-template #showSelectMsg>
+    <router-outlet></router-outlet>
+  </ng-template>
+</div>

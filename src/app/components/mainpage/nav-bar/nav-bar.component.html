@@ -1,0 +1,46 @@
+<nav class="navbar navbar-light navbar-expand-lg">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="navbar-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li class="navbar-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">My Offers</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/offers/overview1" routerLinkActive="active">All offers list</a>
+          <a class="dropdown-item" routerLink="/offers/overview2" routerLinkActive="active">M/D (component store)</a>
+          <a class="dropdown-item" routerLink="/offers/overview3" routerLinkActive="active">M/D (from service)</a>
+          <a class="dropdown-item" routerLink="/offers/overview4" routerLinkActive="active">M/D (queryparams)</a>
+          <a class="dropdown-item" routerLink="/offers/overview41" routerLinkActive="active">M/D (qp+deactivate)</a>
+          <a class="dropdown-item" routerLink="/offers/overview5" routerLinkActive="active">M/D (routerparams)</a>
+          <a class="dropdown-item" routerLink="/offers/overview42" routerLinkActive="active">M/D (validated)</a>
+          <a class="dropdown-item" routerLink="/offers/overview6" routerLinkActive="active">M/D (persisted)</a>
+        </div>
+      </li>
+      <li class="navbar-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">My Bids</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+          <a class="dropdown-item" href="#">Active</a>
+          <a class="dropdown-item" href="#">History</a>
+        </div>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="nav-link">My Account</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+      </li>
+    </ul>
+  </div>
+</nav>
